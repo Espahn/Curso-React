@@ -15,7 +15,7 @@ export default function ItemList (){
 
     const productosEnStock = new Promise ((resolve, reject) => {
         setTimeout(() => {
-            resolve('Cargando...');
+            resolve();
         }, 2000)
     });
 

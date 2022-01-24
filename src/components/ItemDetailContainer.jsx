@@ -1,14 +1,14 @@
 import react, {useState, useEffect} from "react";
-import ItemCount from "./ItemCount";
-import ItemList from "./ItemList";
+import ItemDetail from "./ItemDetail";
 
-export default function ItemListContainer (){
+export default function ItemDetailContainer (){
 
+    
     const [misProductos, setMisProductos] = useState([]);
 
     useEffect(()=>{
         setTimeout(()=>{
-            setMisProductos([
+            setMisProductos([ 
                 {id: 1, nombre: "Ryzen 5", precio: "$43.489", info: "Procesador Amd Ryzen 5 5600X 3.7 Ghz - AM4", imagen: "../imagenes/Ryzen5.jpeg", cache: "32 MB", nucleos: "6", hilos: "12", frecuenciaMin: "3,7 GHz", frecuenciaMax: "4,6 GHz"},
                 {id: 2, nombre: "Ryzen 7", precio: "$56.779", info: "Procesador Amd Ryzen 7 5800X 4.7 Ghz - AM4", imagen: "../imagenes/Ryzen7.jpeg", cache: "32 MB", nucleos: "8", hilos: "16", frecuenciaMin: "3,8 GHz", frecuenciaMax: "4,7 GHz"},
                 {id: 3, nombre: "Ryzen 9", precio: "$114.989", info: "Procesador Amd Ryzen 9 5950X 4.9 Ghz - AM4", imagen: "../imagenes/Ryzen9.jpeg", cache: "64 MB", nucleos: "16", hilos: "32", frecuenciaMin: "3,4 GHz", frecuenciaMax: "4,9 GHz"},
@@ -21,11 +21,7 @@ export default function ItemListContainer (){
 
     return (
         <>
-            <div>
-                <p style={{size: '20px'}} >Bienvenidos a PC Para Mí, donde el único límite es tu imaginación</p>
-            </div>
-            <ItemList misProductos={misProductos}/>
-            <ItemCount />
+            <ItemDetail misProductos={misProductos}/>
         </>
     )
 }

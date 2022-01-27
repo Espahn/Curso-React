@@ -2,12 +2,12 @@ import React from "react";
 import Detail from "./Detail";
 
 
-export default function ItemDetail ({misDetalles}){
+export default function ItemDetail ({misProductos}){
 
             return (
                 <>
                     {
-                        misDetalles.map(item => <Detail item={item} />)
+                        misProductos.map(item => <Detail item={item} />)
                     }
                 </>
             )};

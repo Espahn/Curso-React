@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Item from "./Item";
 
 
-export default function ItemList (misProductos){
+export default function ItemList ({misProductos}){
 
             return (
                 <>

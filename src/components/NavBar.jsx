@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Logo from "./Logo";
 
@@ -13,8 +14,8 @@ export default function NavBar (){
                 </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-                    <a class="nav-link" href="#">CPU</a>
+                    <Link to={'/'} class="nav-link active" aria-current="page" href="#">Inicio</Link>
+                    <Link to={'/category/cpu'} class="nav-link" href="#">CPU</Link>
                     <a class="nav-link" href="#">Motherboard</a>
                     <a class="nav-link" href="#">Memoria RAM</a>
                     <a class="nav-link" href="#">Tarjeta gráfica</a>

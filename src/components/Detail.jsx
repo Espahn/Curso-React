@@ -11,6 +11,7 @@ export default function Detail ({item}){
                     <p>Hilos: {item.hilos}</p>
                     <p>Frecuencia mínima: {item.frecuenciaMin}</p>
                     <p>Frecuencia máxima: {item.frecuenciaMax}</p>
+                    <button>Agregar al carrito</button>
                 </div>      
             </div>
         </>

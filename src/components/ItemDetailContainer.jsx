@@ -1,5 +1,6 @@
 import react, {useState, useEffect} from "react";
 import ItemDetail from "./ItemDetail";
+import ItemCount from "./ItemCount";
 
 export default function ItemDetailContainer (){
 
@@ -22,6 +23,7 @@ export default function ItemDetailContainer (){
     return (
         <>
             <ItemDetail misProductos={misProductos}/>
+            <ItemCount />
         </>
     )
 }

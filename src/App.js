@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
@@ -6,9 +7,20 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 function App() {
   return (
     <>
-    <NavBar />
-    <ItemListContainer />
-    <ItemDetailContainer />
+    <BrowserRouter>
+        <NavBar />
+        <Switch>
+          <Route exact path="/">
+                <ItemListContainer/>
+          </Route>
+            <Route path="/category/:id">
+                <ItemListContainer/>
+            </Route>
+            <Route path="/item/:id">
+                <ItemDetailContainer />
+            </Route>
+        </Switch>
+    </BrowserRouter>
     </>
   );
 }

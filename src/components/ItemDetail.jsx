@@ -2,7 +2,7 @@ import React from "react";
 import Detail from "./Detail";
 
 
-export default function ItemDetail (misDetalles){
+export default function ItemDetail ({misDetalles}){
 
             return (
                 <>
@@ -12,4 +12,4 @@ export default function ItemDetail (misDetalles){
                 </>
             )};
 
-                                                
+                                            

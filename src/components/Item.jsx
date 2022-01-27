@@ -9,6 +9,7 @@ export default function Item ({item}){
                         <p>{item.info}</p>
                         <p>{item.precio}</p>
                         <img src={item.imagen} alt=""></img>
+                        <button>Más info</button>
                     </div>      
             </div>
         </>

@@ -4,6 +4,8 @@ import Detail from "./Detail";
 
 export default function ItemDetail ({misProductos}){
 
+    
+
             return (
                 <>
                     {

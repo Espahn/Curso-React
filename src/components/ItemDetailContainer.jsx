@@ -9,6 +9,10 @@ export default function ItemDetailContainer (){
     
     const [misProductos, setMisProductos] = useState([]);
 
+    function onAdd() {
+        alert('compraste ${add} items');
+    }
+
     useEffect(()=>{
         setTimeout(()=>{
             setMisProductos(misProductos.filter(item => item.id === id));

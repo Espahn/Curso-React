@@ -28,7 +28,7 @@ export default function Detail ({item, misProductos, onAdd}){
             (mostrarItemCount)?
                 <ItemCount misProductos={misProductos} onAdd={onAdd} />
             :
-                <Link to={`/cart`}>Terminar mi compra</Link>
+                <button><Link to={`/cart`}>Terminar mi compra</Link></button>
         }
         </>
     )

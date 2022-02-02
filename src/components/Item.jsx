@@ -11,8 +11,8 @@ export default function Item ({item}){
                         <div class="col">
                         <p>{item.info}</p>
                         <p>{item.precio}</p>
-                        <img src={item.imagen} alt=""></img>
-                        <Link to={`/item/${item.id}`}>Ver detalle</Link>
+                        <img class="img-fluid" src={item.imagen} alt=""></img>
+                        <button><Link to={`/item/${item.id}`}>Ver detalle</Link></button>
                         </div>
                     </div>      
             </div>

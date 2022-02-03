@@ -8,8 +8,7 @@ export default function Cart (element){
        return (
         <>
             <div>
-                {cart.map(element => <div key={element.miItem.id}>{element.miItem.nombre}</div>)}
-                <button onClick={() => deleteItem(element.miItem.id)}>Delete</button>
+                {cart.map(element => <div key={element.item.id}>{element.item.nombre}<button onClick={() => deleteItem(element.item.id)}>Delete</button></div>)}
             </div>
         </>
     )

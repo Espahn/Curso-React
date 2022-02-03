@@ -1,13 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
-import { useState } from "react/cjs/react.development";
+import { useContext, useState } from "react/cjs/react.development";
+import { cartContext } from "../context/CartProvider";
 import ItemCount from "./ItemCount";
 
 export default function ItemDetail ({miItem, onAdd}){
 
     const [mostrarItemCount, setMostrarItemCount] = useState(true);
 
+    const {addToCart} = useContext(cartContext);
+
     function onAdd(cantidad) {
+        addToCart(miItem, cantidad)
         alert(`Quiero agregar: ${miItem.nombre}`);
         setMostrarItemCount(false);
     }
@@ -27,7 +31,7 @@ export default function ItemDetail ({miItem, onAdd}){
 
         {
             (mostrarItemCount)?
-                <ItemCount item={miItem} onAdd={onAdd}/>
+                <ItemCount onAdd={onAdd} stock={miItem.stock} initial={1}/>
             :
                 <button><Link to={`/cart`}>Terminar mi compra</Link></button>
         }

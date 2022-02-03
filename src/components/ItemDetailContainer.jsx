@@ -29,14 +29,9 @@ export default function ItemDetailContainer (){
         }, 2000)
     }, [])
 
-    const onAdd = (count) => {
-        console.log(`Agregaste: ${miItem.nombre}.`);
-        addToCart(miItem, count);
-    }
-
-    return (
+      return (
         <>
-            <ItemDetail miItem={miItem} onAdd={onAdd}/>
+            <ItemDetail miItem={miItem} />
         </>
     )
 }

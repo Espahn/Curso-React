@@ -17,12 +17,12 @@ const CartProvider = ({ children }) => {
       }
     
       const deleteItem = (id) => {
-        const updatedCart = cart.filter(element => element.miItem.id !== id)
+        const updatedCart = cart.filter(element => element.item.id !== id)
         setCart(updatedCart);
       }
     
       const isInCart = (id) => {
-        return cart.some(element => element.miItem.id === id)
+        return cart.some(element => element.item.id === id)
       }
     
       

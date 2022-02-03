@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function ItemCount({ misProductos, stock, initial, onAdd}) {
+export default function ItemCount({ stock, initial, onAdd}) {
 
 
   const [contador, setContador] = useState(initial);

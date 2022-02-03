@@ -3,12 +3,12 @@ import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import { useState } from "react/cjs/react.development";
 import ItemCount from "./ItemCount";
 
-export default function ItemDetail ({miItem}){
+export default function ItemDetail ({miItem, onAdd}){
 
     const [mostrarItemCount, setMostrarItemCount] = useState(true);
 
     function onAdd(cantidad) {
-        alert('quiero agregar: ' + cantidad);
+        alert(`Quiero agregar: ${miItem.nombre}`);
         setMostrarItemCount(false);
     }
 
@@ -27,7 +27,7 @@ export default function ItemDetail ({miItem}){
 
         {
             (mostrarItemCount)?
-                <ItemCount item={miItem} />
+                <ItemCount item={miItem} onAdd={onAdd}/>
             :
                 <button><Link to={`/cart`}>Terminar mi compra</Link></button>
         }

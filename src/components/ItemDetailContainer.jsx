@@ -1,9 +1,12 @@
-import react, {useState, useEffect} from "react";
+import react, {useState, useEffect, useContext} from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import ItemDetail from "./ItemDetail";
 import ItemCount from "./ItemCount";
+import { cartContext } from "../context/CartProvider";
 
 export default function ItemDetailContainer (){
+
+    const {addToCart} = useContext(cartContext);
 
     const { id } = useParams();
     
@@ -26,9 +29,14 @@ export default function ItemDetailContainer (){
         }, 2000)
     }, [])
 
+    const onAdd = (count) => {
+        console.log(`Agregaste: ${miItem.nombre}.`);
+        addToCart(miItem, count);
+    }
+
     return (
         <>
-            <ItemDetail miItem={miItem}/>
+            <ItemDetail miItem={miItem} onAdd={onAdd}/>
         </>
     )
 }

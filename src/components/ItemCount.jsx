@@ -1,15 +1,26 @@
 import React, { useState } from "react";
 
-export default function ItemCount({ misProductos, onAdd}) {
+export default function ItemCount({ misProductos, stock, initial, onAdd}) {
 
 
-    return (
-        <>
-            <div className="counter">
-                <button>-</button>
-                <button onClick={() => onAdd()}>Agregar al carrito</button>
-                <button>+</button>
-            </div>
-        </>
-    );
+  const [contador, setContador] = useState(initial);
+
+  const aumentarContador = () => {
+    if (contador <= stock) setContador(contador + 1);
+  };
+
+  const disminuirContador = () => {
+    if (contador > initial) setContador(contador - 1);
+  };
+
+  return (
+    <div className="itemCount">
+      <button onClick={disminuirContador}>-</button>
+
+      <bn>{contador}</bn>
+
+      <button onClick={aumentarContador}>+</button>
+      <button onClick={() => onAdd(contador)}>Add to cart</button>
+    </div>
+  );
 };

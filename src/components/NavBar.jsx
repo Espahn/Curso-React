@@ -1,9 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
+import { cartContext } from "../context/CartProvider";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 import Logo from "./Logo";
 
 export default function NavBar (){
+
+    const { cart } = useContext(cartContext);
+
     return (
         <>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -24,7 +28,11 @@ export default function NavBar (){
                     <a class="nav-link" href="#">Gabinete</a>
                 </div>
             </div>
-            <CartWidget />
+            {cart.length === 0 ?
+            []
+            :
+            <CartWidget />        
+            }
             </div>
             </nav>
         </>

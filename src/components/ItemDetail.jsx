@@ -27,6 +27,7 @@ export default function ItemDetail ({miItem, onAdd}){
                     <p>Hilos: {miItem.hilos}</p>
                     <p>Frecuencia mínima: {miItem.frecuenciaMin}</p>
                     <p>Frecuencia máxima: {miItem.frecuenciaMax}</p>
+                    <p>Precio: ${miItem.precio}</p>
                 </div>      
             </div>
 

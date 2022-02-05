@@ -41,3 +41,8 @@
   background-color: black;
   color: whitesmoke;
 }
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+}

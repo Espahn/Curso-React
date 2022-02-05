@@ -6,7 +6,7 @@ import CartItem from "./CartItem";
 
 export default function Cart (element){
 
-    const { cart, clearCart, precioTotal, cantidadTotal } = useContext(cartContext);
+    const { cart, clearCart, precioTotal } = useContext(cartContext);
 
     const [total, setTotal] = useState(0);
 

@@ -31,7 +31,7 @@ export default function NavBar (){
             {cart.length === 0 ?
             []
             :
-            <CartWidget />        
+            <CartWidget />       
             }
             </div>
             </nav>

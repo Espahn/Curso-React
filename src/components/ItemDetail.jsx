@@ -22,11 +22,7 @@ export default function ItemDetail ({miItem, onAdd}){
                 <div>
                     {/* <p>{JSON.stringify(miItem)}</p> */}
                     <img style={{width: '300px', height: '300px'}} class="img-fluid" src={miItem.imagen} alt=""></img>
-                    <p>Caché: {miItem.cache}</p>
-                    <p>Núcleos: {miItem.nucleos}</p>
-                    <p>Hilos: {miItem.hilos}</p>
-                    <p>Frecuencia mínima: {miItem.frecuenciaMin}</p>
-                    <p>Frecuencia máxima: {miItem.frecuenciaMax}</p>
+                    <p>Detalles: {miItem.detalles}</p>
                     <p>Precio: ${miItem.precio}</p>
                 </div>      
             </div>

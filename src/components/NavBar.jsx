@@ -19,7 +19,7 @@ export default function NavBar (){
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <Link to={'/'} class="nav-link active" aria-current="page" href="#">Inicio</Link>
-                    <Link to={'/category/cpu'} class="nav-link" href="#">CPU</Link>
+                    <Link to={'/categoria/CPU'} class="nav-link" href="#">CPU</Link>
                     <a class="nav-link" href="#">Motherboard</a>
                     <a class="nav-link" href="#">Memoria RAM</a>
                     <a class="nav-link" href="#">Tarjeta gráfica</a>

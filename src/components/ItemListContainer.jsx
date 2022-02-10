@@ -1,37 +1,45 @@
 import react, {useState, useEffect} from "react";
 import { getFirestore } from "../firebase/firebase";
+import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 import ItemList from "./ItemList";
 
 export default function ItemListContainer (){
 
     const [misProductos, setMisProductos] = useState([]);
 
+    const { categoria } = useParams();
+
     useEffect(()=>{
     
     const db = getFirestore();
 
-    const itemCollection = db.collection("items")
-
-    itemCollection.get()
-      .then((querySnapShot) => {
-
-        if (querySnapShot.size == 0) {
-          console.log('no hay documentos con en ese query');
-          return
+        if (categoria) {
+          db
+            .collection("items")
+            .where("categoria", "==", categoria)
+            .get()
+            .then((res) =>
+              setMisProductos(
+                res.docs.map((item) => ({ ...item.data(), id: item.id }))
+              )
+            )
+            .catch((err) =>
+              console.log("CATEGORY: error reading items form firebase => ", err)
+            );
+        } else {
+          db
+            .collection("items")
+            .get()
+            .then((res) =>
+              setMisProductos(
+                res.docs.map((item) => ({ ...item.data(), id: item.id }))
+              )
+            )
+            .catch((err) =>
+              console.log("HOME: error reading items form firebase => ", err)
+            );
         }
-
-        console.log('hay documentos');
-
-        setMisProductos(querySnapShot.docs.map((doc)=> {
-            return { id: doc.id, ...doc.data() }
-        }
-        ));
-        
-      })
-      .catch((err)=>{
-        console.log(err);
-      })
-  }, [])
+  }, [categoria])
 
     return (
         <>

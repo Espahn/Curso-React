@@ -18,14 +18,14 @@ export default function NavBar (){
                 </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <Link to={'/'} class="nav-link active" aria-current="page" href="#">Inicio</Link>
-                    <Link to={'/categoria/CPU'} class="nav-link" href="#">CPU</Link>
-                    <a class="nav-link" href="#">Motherboard</a>
-                    <a class="nav-link" href="#">Memoria RAM</a>
-                    <a class="nav-link" href="#">Tarjeta gráfica</a>
-                    <a class="nav-link" href="#">Almacenamiento</a>
-                    <a class="nav-link" href="#">Fuente</a>
-                    <a class="nav-link" href="#">Gabinete</a>
+                    <Link to={'/'} class="nav-link active" aria-current="page">Inicio</Link>
+                    <Link to={'/category/CPU'} class="nav-link">CPU</Link>
+                    <Link to={'/category/Motherboard'} class="nav-link">Motherboard</Link>
+                    <a class="nav-link">Memoria RAM</a>
+                    <a class="nav-link">Tarjeta gráfica</a>
+                    <a class="nav-link">Almacenamiento</a>
+                    <a class="nav-link">Fuente</a>
+                    <a class="nav-link">Gabinete</a>
                 </div>
             </div>
             {cart.length === 0 ?

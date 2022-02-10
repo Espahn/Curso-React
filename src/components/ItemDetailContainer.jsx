@@ -14,9 +14,11 @@ export default function ItemDetailContainer (){
     const [miItem, setMiItem] = useState({});
 
     useEffect(()=>{
-        const db = getFirestore();
-    const itemCollection = db.collection("items");
     
+    const db = getFirestore();
+    
+    const itemCollection = db.collection("items");
+        
     const miItem = itemCollection.doc(id);
 
     miItem.get()    

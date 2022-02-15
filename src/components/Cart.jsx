@@ -79,10 +79,10 @@ export default function Cart (element){
                     
                     <h3>Ingresa tus datos:</h3>
 
-                    <input type="text" name="name" ref={nameRef} placeholder="Nombre y Apelllido" />
+                    <input type="text" name="name" ref={nameRef} placeholder="Nombre y apellido" />
                     <br />
 
-                    <input type="text" name="mobile" ref={mobileRef} placeholder="Nro de Celular" />
+                    <input type="text" name="mobile" ref={mobileRef} placeholder="Nº de celular" />
                     <br />
 
                     <input type="text" name="email" ref={emailRef} placeholder="Email" />
@@ -94,10 +94,10 @@ export default function Cart (element){
                     <input type="text" name="city" ref={cityRef} placeholder="Ciudad" />
                     <br />
 
-                    <input type="text" name="address" ref={addressRef} placeholder="Direccion" />
+                    <input type="text" name="address" ref={addressRef} placeholder="Dirección" />
                     <br />
 
-                    <button onClick={() => handleClick()}>Vamos!</button>
+                    <button onClick={() => handleClick()}>Siguiente</button>
                 </div>
             </div>       
             }

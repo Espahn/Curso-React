@@ -21,11 +21,6 @@ export default function NavBar (){
                     <Link to={'/'} class="nav-link active" aria-current="page">Inicio</Link>
                     <Link to={'/category/CPU'} class="nav-link">CPU</Link>
                     <Link to={'/category/Motherboard'} class="nav-link">Motherboard</Link>
-                    <a class="nav-link">Memoria RAM</a>
-                    <a class="nav-link">Tarjeta gráfica</a>
-                    <a class="nav-link">Almacenamiento</a>
-                    <a class="nav-link">Fuente</a>
-                    <a class="nav-link">Gabinete</a>
                 </div>
             </div>
             {cart.length === 0 ?
